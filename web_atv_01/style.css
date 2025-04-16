@@ -1,0 +1,55 @@
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+th, td {
+    width: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border: 1px solid black;
+    
+}
+
+tr:nth-child(even) {
+    background-color: rgb(144, 235, 235);
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(212, 233, 233);
+}
+tr:hover {
+    background-color: bisque;
+}
+
+body{
+    background-color: #ff38;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    background-color: aqua;
+}
+
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    background-color: red;
+}
+
+h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    background-color: bisque;
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+}
