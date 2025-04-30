@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+}
+
+aside {
+    width: 200px;
+    background-color: gray;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.p{
+    text-align: justify;
+}
+
+main {
+    display: flex;
+    background-color: #f4f4f4;
+}
+main > div {
+    margin: 10px;
+}
+main section {
+    display: flex;
+    flex-direction: column;
+}
+.flex-container {
+    display: flex;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    color: rebeccapurple;
+    font-weight: bolder;
+    background-color: bisque;
+    height: 30px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+a:hover {
+    color: rgb(157, 255, 0);
+}
+
+
+  

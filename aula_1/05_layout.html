@@ -1,66 +1,76 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="pt-br">
 <head>
     <title>Layout</title>
     <style>
         body {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
         }
         .flex-container {
             display: flex;
             flex-direction: column;
-            background-color: lightgray;
-        }
-
-        .footer {
-            align-content: end;
-            justify-items: center;
-            background-color: gray;
         }
 
         .flex-container .header, .flex-container .footer {
             background-color: gray;
             text-align: center;
-            color: white;
-            padding: 30px;
+            font-size: 50px;
+            color: #ffffff;
         }
 
-        .content {
-            background-color: #fff;
+        .flex-container .content .main {
+            text-align: justify;
         }
 
-        .links {
+        .flex-container .content {
+            display: flex;
+        }
+
+        .flex-container .footer {
+            font-size: large;
+            padding: 10px;
+        }
+
+        .flex-container .main {
+            align-items: start;
+            padding: 20px;
             background-color: lightgray;
-            padding: 15px;
         }
 
-        li {
+        .flex-container .content .navbar {
             list-style: none;
+            margin-right: 15px;
+            width: 500px;
         }
+
+        .container .content .navbar ul{
+        padding: 10px;
+        
+    }
     </style>
 </head>
+
 <body>
     <div class="flex-container">
-        <h2> Example</h2>
         <div class="header">
             <h1>Cities</h1>
         </div>
         <div class="content">
-            <div class="links">
+            <div class="navbar">
                 <ul>
                     <li><a href="#">London</a></li>
                     <li><a href="#">Paris</a></li>
                     <li><a href="#">Tokyo</a></li>
                 </ul>
             </div>
-            <div class="cities">
-                <h2>London</h2>
-                <p>London is the capital city of England.</p>
-                <p>London has over 9 million inhabitants.</p>
+            <div class="main">
+                <h1>London</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque odit, cumque provident deleniti atque incidunt officia tenetur optio quam sapiente? Nostrum, aut est. Excepturi itaque repudiandae aperiam molestiae id? Autem.</p>
             </div>
         </div>
-        <div class="footer">Footer</div>
+        <div class="footer">
+            Footer
+        </div>
     </div>
 </body>
 </html>
