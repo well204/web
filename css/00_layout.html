@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <link id="theme" rel="stylesheet" href="00_layout.css">
+        <meta charset="utf-8">
+        <title>Layout</title>
+    </head>
+
+    <body>
+        <h1>Multiplos Layouts</h1>
+        <h3>Layout Escolhido: <span id="number">0</span></h3>
+        <button onclick="layout_00()">Layout 00</button>
+        <button onclick="layout_01()">Layout 01</button>
+        <button onclick="toggle()">Toggle</button>
+        <button onclick="circular()">Cincular</button>
+        <p id="p1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, aliquid hic optio corrupti distinctio quos, corporis fugit nostrum quidem nihil minima, perferendis aperiam facere eos aut ipsa dolores exercitationem possimus.</p>
+        <p id="p2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, aliquid hic optio corrupti distinctio quos, corporis fugit nostrum quidem nihil minima, perferendis aperiam facere eos aut ipsa dolores exercitationem possimus.</p>
+        <p id="p3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, aliquid hic optio corrupti distinctio quos, corporis fugit nostrum quidem nihil minima, perferendis aperiam facere eos aut ipsa dolores exercitationem possimus.</p>
+        <p id="p4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, aliquid hic optio corrupti distinctio quos, corporis fugit nostrum quidem nihil minima, perferendis aperiam facere eos aut ipsa dolores exercitationem possimus.</p>
+            <script>
+                function layout_00() {
+                    let link = document.getElementById("theme")
+                    link.href = "00_layout.css"
+                }
+
+                function layout_01() {
+                    let link = document.getElementById("theme")
+                    link.href = "01_layout.css"
+                }
+                let flag = true
+                
+                function toggle() {
+                    let link = document.getElementById("theme")
+                    if (flag) {
+                        link.href = "01_layout.css"
+                    }
+                    else{
+                        link.href = "00_layout.css"
+                    }
+                    flag = !flag
+                }
+                let index = 0;
+                function circular() {
+                    let link = document.getElementById("theme")
+                    link.href = `0${index}_layout.css`
+                    index = (index + 1) % 3
+                    document.getElementById("number").innerHTML = index
+                }
+            </script>
+    </body>
+
+</html>
