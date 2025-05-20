@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.header {
+    background-color: rgb(12, 180, 124);
+    text-align: center;
+    color: white;
+    padding: 30px;
+}   
+
+.nav {
+    display: flex;
+    background-color: black;
+}
+
+.nav a{
+    text-decoration: none;   
+    padding: 14px 20px; 
+    text-align: center;
+    color: white;
+}
+
+.nav a:hover {
+    background: #ddd;
+    color: black;
+}
+
+
+.content {
+    display: flex;
+}
+
+.content .side {
+    flex: 60%;
+    padding: 20px;
+
+}
+
+.content .main {
+    flex: 40%;
+    padding: 20px;
+
+}
+
+.fake-img {
+    background-color: #aaa;
+    padding: 20px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: lightgray;
+    text-align: center;
+    padding: 20px;
+}
