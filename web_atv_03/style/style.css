@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box; /* para evitar overflow*/
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s; /*suavizar a mudança de tema*/
+}
+
+
+
+/*estilo para o modo escuro  */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+#toggle-theme {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 50%; /*deixar o botão arredondado*/
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer; /*mudar o estilo co cursor*/
+  padding: 2px;
+}
+
+/*mudar o background quando passar o mouse por cima*/
+#toggle-theme:hover {
+  background-color: #e0e0e0; 
+}
+
+
+
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: rgb(33, 151, 112);
+    color: white;
+
+}
+
+nav {
+    background-color: black;
+    display: flex;
+    position: sticky; /* deixar o elemento nav "grudado"*/
+    top: 0; 
+}
+
+nav a {
+    text-decoration: none; 
+    color: white;
+    padding: 14px 20px;   
+    
+}
+
+nav a:hover {
+    background-color: white; /*mudar a cor quando passar com o mouse por cima*/
+    color: black;
+}
+
+main {
+    display: flex; /*display flex para organizar os items em linhas*/
+    padding: 20px;
+}
+
+.content {
+    flex: 45%; /* quantidade de espaço que o elemento vai ocupar no flex-box */
+    background-color: lightgray;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.side {
+    padding: 10px;
+    flex: 55%; /* quantidade de espaço que o elemento vai ocupar no flex-box */
+    background-color: lightgray;
+}
+
+#dostoievski{
+    width: 400px;
+    height: 400px;
+}
+
+#prisao {
+    width: 600px;
+}   
+
+main .side strong {
+    color: red; /* mudando a cor para dar um pouco mais de destaque nos strong*/
+}
+
+main h1, h2 {
+    color: rgb(15, 23, 99); /*padronizando as cores dos hs */
+}
+
+.side img {
+    width: 400px;
+    height: 400px;
+} /*colocando um tamanho padrão para as imagens do side*/
+
+.side figcaption {
+    margin-bottom: 50px;
+} /*colocando um margin-bottom para as figcaption não ficarem tão coladas com a imagem de baixo*/
+
+footer {
+    background-color: lightblue;
+    text-align: center;
+    padding: 30px;
+
+}
+
+
+/* Ajustes para o modo escuro */
+body.dark-mode header {
+    background-color: #1a4731;
+}
+
+body.dark-mode nav {
+    background-color: #333;
+}
+
+body.dark-mode .content,
+body.dark-mode .side {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+body.dark-mode main h1,
+body.dark-mode main h2 {
+    color: #7fb3d5;
+}
+
+body.dark-mode footer {
+    background-color: #1e3d4e;
+}
+

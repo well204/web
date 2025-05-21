@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style/style.css"> <!--link parao arquivo css-->
+        <title>Dostoiévsk</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Dostoiévski 360</h1>
+            <p>Um pouco sobre a história do autor</p>
+        </header>
+
+        <nav>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+            <!--um botão para trocar o tema da página-->
+            <button onclick="alternarTema()" id="toggle-theme" aria-label="Alternar tema">🌙</button>
+        </nav>
+
+        <main>
+            <!--div com as principais informações do autor, que vai ficar na esquerda-->
+            <div class="content">
+            <h1>Infância e Formação</h1>
+            <!--foto do autor com uma legenda usando figure e figcaption-->
+            <figure >
+                <img id="dostoievski" src="img/dostoievski.jpg" alt="Fiódor Mikhailovich Dostoiévsk">
+                <figcaption>Fiódor Mikhailovich Dostoiévsk</figcaption>
+            </figure>
+            <p>Fiódor Mikhailovich Dostoiévski nasceu em 11 de novembro de 1821,
+                 em Moscou, Rússia. Filho de um médico militar e de uma mãe devota,
+                  cresceu em um ambiente familiar rígido e religioso. Aos 16 anos, 
+                  ingressou na Academia Militar de Engenharia de São Petersburgo, onde,
+                   além das disciplinas técnicas, teve contato com a literatura europeia,
+                    especialmente autores franceses e alemães, como Victor Hugo e
+                     Friedrich Schiller. 
+                Essa formação literária influenciou profundamente sua futura carreira como escritor.
+             </p>
+
+             <h1>Início da Carreira Literária</h1>
+             <p>
+                Em 1846, Dostoiévski publicou seu primeiro romance, "Gente Pobre", que recebeu 
+                aclamação da crítica e o estabeleceu como uma nova voz na literatura russa.
+                 A obra foi elogiada por sua abordagem realista e sensível às questões sociais. 
+                 No entanto, 
+                suas obras subsequentes, como "O Duplo", não tiveram o mesmo sucesso imediato.
+             </p>
+              <h1>Prisão e Exílio na Sibéria</h1>
+                <figure>
+                <img id="prisao" src="img/prisao.jpg" alt="Fortaleza de Pedro e Paulo">
+                <figcaption><strong>Fortaleza de Pedro e Paulo</strong><br>Local onde Dostoiévski foi encarcerado antes do exílio na Sibéria.</figcaption>
+                </figure>
+                <p>
+                    Em 1849, Dostoiévski foi preso por participar de um grupo 
+                    intelectual que discutia ideias proibidas pelo regime czarista.
+                     Condenado à morte, teve sua sentença comutada no último momento 
+                     para quatro anos de trabalhos forçados na Sibéria, seguidos por
+                      serviço militar obrigatório. Essa experiência traumática influenciou 
+                      profundamente sua visão de mundo e sua obra literária, levando-o a 
+                    explorar temas como sofrimento, redenção e fé.
+                </p>
+
+                <h1>Vida Pessoal e Casamentos</h1>
+                <figure>
+                    <img src="img/esposa.jpg" alt="Retrato de Anna Grigórievna Snítkina">
+                    <figcaption><strong>Anna Grigórievna Snítkina</strong><br>Segunda esposa de Dostoiévski e sua colaboradora literária.</figcaption>
+                </figure>
+                <p>Após seu retorno do exílio, em 1857, casou-se com Maria Dmitriévna Issaiev,
+                     uma viúva por quem se apaixonara durante seu tempo no Cazaquistão. O casamento 
+                     foi marcado por dificuldades, incluindo a saúde frágil de Maria, que faleceu em 1864.
+                      Em 1867, Dostoiévski casou-se com Anna Grigórievna Snítkina, sua estenógrafa. Anna 
+                      desempenhou um papel crucial na vida do escritor, auxiliando-o na organização de seus 
+                      manuscritos e na gestão de suas finanças, especialmente 
+                    durante seus períodos de dificuldades econômicas.</p>
+                <h1>Vício em Jogos e Dívidas</h1>
+
+                <p>Dostoiévski desenvolveu um vício em jogos de azar, especialmente na roleta,
+                     o que agravou suas dificuldades financeiras. Durante suas viagens pela Europa,
+                      perdeu grandes somas de dinheiro, inclusive recursos que pertenciam a sua 
+                      esposa Anna.
+                     Essas experiências foram retratadas em sua obra "O Jogador", publicada em 1866.
+                    </p>
+                <h1>Últimos Anos e Legado</h1>
+                <p>Nos últimos anos de sua vida, Dostoiévski alcançou reconhecimento 
+                    como um dos maiores escritores russos. Em 1880, participou da inauguração do monumento 
+                    a Aleksandr Pushkin em Moscou, onde proferiu um discurso memorável. Faleceu em 9 de fevereiro
+                     de 1881, em São Petersburgo, devido a uma hemorragia pulmonar associada a um ataque epiléptico. 
+                     Seu funeral foi acompanhado por uma multidão de admiradores. Hoje,
+                      suas obras continuam a ser estudadas e admiradas mundialmente,
+                     mantendo sua relevância e impacto na literatura.</p>
+
+            </div>
+
+            <!-- essa div vai ficar na direita e vai mostras as obras do autor-->
+            <div class="side">
+                <!--várias imgs dentro de uma section mostrando as obras mais famosas do autor-->
+                <section>
+                <h2>Obras-Primas de Dostoiévski</h2>
+                <div class="galeria">
+                    <figure>
+                    <img src="img/crime-e-castigo.jpg" alt="Capa do livro Crime e Castigo">
+                    <figcaption><strong>Crime e Castigo</strong><br>Explora os dilemas morais de um jovem estudante que comete um assassinato.</figcaption>
+                    </figure>
+                    <figure>
+                    <img src="img/o-idiota.webp" alt="Capa do livro O Idiota">
+                    <figcaption><strong>O Idiota</strong><br>Retrata a pureza e a inocência em um mundo corrompido.</figcaption>
+                    </figure>
+                    <figure>
+                    <img src="img/os-demonios.jpg" alt="Capa do livro Os Demônios">
+                    <figcaption><strong>Os Demônios</strong><br>Aborda o extremismo político e suas consequências.</figcaption>
+                    </figure>
+                    <figure>
+                    <img src="img/os-irmaos-karamazovi.webp" alt="Capa do livro Os Irmãos Karamázov">
+                    <figcaption><strong>Os Irmãos Karamázov</strong><br>Trata de temas como fé, dúvida e a natureza do mal.</figcaption>
+                    </figure>
+                </div>
+                </section>
+                
+            </div>
+        </main>
+
+        <footer>
+            &copy; Todos os diretos reservados.
+        </footer>
+        <!--scrip para o botão de trocar de tema funcionar-->
+        <script>
+                //função para alternar o tema
+                function alternarTema() {
+                    const body = document.body; //vou alterar o body com essa constante
+                    const toggleButton = document.getElementById('toggle-theme'); //pegando o elemento pelo id
+                    
+                    //alterna a classe dark-mode no body
+                    body.classList.toggle('dark-mode');
+                    
+                    //altera o ícone e o texto alternativo
+                    if (body.classList.contains('dark-mode')) {
+                        toggleButton.textContent = '☀️';
+                        toggleButton.setAttribute('aria-label', 'Alternar para tema claro');
+                        localStorage.setItem('tema', 'escuro');
+                    } else {
+                        toggleButton.textContent = '🌙'; 
+                        toggleButton.setAttribute('aria-label', 'Alternar para tema escuro');
+                        localStorage.setItem('tema', 'claro');
+                    }
+                }
+
+                //verifica o tema salvo ao carregar a página
+                window.addEventListener('DOMContentLoaded', () => {
+                    const temaSalvo = localStorage.getItem('tema');
+                    if (temaSalvo === 'escuro') {
+                        document.body.classList.add('dark-mode');
+                        document.getElementById('toggle-theme').textContent = '☀️';
+                    }
+                });
+        </script>
+    </body>
+</html>

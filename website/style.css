@@ -16,10 +16,15 @@ body {
     padding: 30px;
 }   
 
+#prisao{
+    width: 400px;
+}
 .nav {
     display: flex;
     background-color: black;
-}
+    position: sticky;
+    top: 0;
+} 
 
 .nav a{
     text-decoration: none;   
