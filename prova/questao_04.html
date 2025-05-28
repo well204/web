@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Questão 04</title>
+
+        <style>
+             .notification-card {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 250px;
+                background-color: #fff;
+                border-radius: 8px;
+                padding: 15px;
+                box-sizing: border-box; 
+                flex-direction: column;
+                justify-content: flex-end;
+                gap: 10px;
+            }
+
+            .card-header {
+                display: flex;
+                justify-content: flex-end; 
+                align-items: center;
+            }
+
+            .card-content {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .notification-card.hidden {
+                display: none; 
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="lorem-content">
+            <h1>Conteúdo da Página para Rolagem</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Aliquam erat volutpat. Fusce feugiat, ante vitae placerat efficitur, nunc velit malesuada arcu, in malesuada ligula quam vel justo. Sed eleifend, felis at tristique ultrices, lorem orci tincidunt enim, vel consequat justo nulla eget libero. Nam interdum, lorem at auctor bibendum, ex magna sollicitudin tellus, eget fermentum purus lectus ac risus. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec dictum consectetur sapien, sit amet pulvinar velit semper vel.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec non mi vel velit euismod volutpat. Integer ullamcorper magna quis metus feugiat, a tristique erat interdum. Quisque non efficitur orci. Cras facilisis, quam vitae suscipit luctus, dolor libero feugiat sem, non malesuada nisi libero vel nisi. Sed sed neque eu arcu ultrices feugiat. Nunc vitae leo at sem tristique sollicitudin.</p>
+            <p>Curabitur venenatis eros vel metus lacinia, vitae luctus ipsum volutpat. Ut ac tellus in est elementum tempor. Maecenas tristique orci at velit facilisis, eget volutpat urna hendrerit. Etiam id felis eget dolor laoreet efficitur. Suspendisse potenti. Nam at consectetur justo, nec congue quam. Mauris tincidunt felis vitae mauris auctor, sit amet suscipit sapien tempor. Aliquam erat volutpat.</p>
+            <p>Phasellus eget risus id mi vulputate varius. Nunc in turpis ac nulla rhoncus scelerisque. Vivamus quis magna at enim tincidunt feugiat ac ac nulla. Integer consectetur nulla vitae dolor scelerisque, nec dictum orci accumsan. Sed tincidunt felis nec risus ultricies, in finibus velit tincidunt. Donec nec velit quis libero cursus laoreet. Proin quis felis vel velit aliquet scelerisque. Fusce vitae nulla sit amet turpis feugiat egestas. Sed at magna non nisi pharetra feugiat.</p>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Aliquam erat volutpat. Fusce feugiat, ante vitae placerat efficitur, nunc velit malesuada arcu, in malesuada ligula quam vel justo. Sed eleifend, felis at tristique ultrices, lorem orci tincidunt enim, vel consequat justo nulla eget libero. Nam interdum, lorem at auctor bibendum, ex magna sollicitudin tellus, eget fermentum purus lectus ac risus. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec dictum consectetur sapien, sit amet pulvinar velit semper vel.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec non mi vel velit euismod volutpat. Integer ullamcorper magna quis metus feugiat, a tristique erat interdum. Quisque non efficitur orci. Cras facilisis, quam vitae suscipit luctus, dolor libero feugiat sem, non malesuada nisi libero vel nisi. Sed sed neque eu arcu ultrices feugiat. Nunc vitae leo at sem tristique sollicitudin.</p>
+            <p>Curabitur venenatis eros vel metus lacinia, vitae luctus ipsum volutpat. Ut ac tellus in est elementum tempor. Maecenas tristique orci at velit facilisis, eget volutpat urna hendrerit. Etiam id felis eget dolor laoreet efficitur. Suspendisse potenti. Nam at consectetur justo, nec congue quam. Mauris tincidunt felis vitae mauris auctor, sit amet suscipit sapien tempor. Aliquam erat volutpat.</p>
+            <p>Phasellus eget risus id mi vulputate varius. Nunc in turpis ac nulla rhoncus scelerisque. Vivamus quis magna at enim tincidunt feugiat ac ac nulla. Integer consectetur nulla vitae dolor scelerisque, nec dictum orci accumsan. Sed tincidunt felis nec risus ultricies, in finibus velit tincidunt. Donec nec velit quis libero cursus laoreet. Proin quis felis vel velit aliquet scelerisque. Fusce vitae nulla sit amet turpis feugiat egestas. Sed at magna non nisi pharetra feugiat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Aliquam erat volutpat. Fusce feugiat, ante vitae placerat efficitur, nunc velit malesuada arcu, in malesuada ligula quam vel justo. Sed eleifend, felis at tristique ultrices, lorem orci tincidunt enim, vel consequat justo nulla eget libero. Nam interdum, lorem at auctor bibendum, ex magna sollicitudin tellus, eget fermentum purus lectus ac risus. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec dictum consectetur sapien, sit amet pulvinar velit semper vel.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec non mi vel velit euismod volutpat. Integer ullamcorper magna quis metus feugiat, a tristique erat interdum. Quisque non efficitur orci. Cras facilisis, quam vitae suscipit luctus, dolor libero feugiat sem, non malesuada nisi libero vel nisi. Sed sed neque eu arcu ultrices feugiat. Nunc vitae leo at sem tristique sollicitudin.</p>
+            <p>Curabitur venenatis eros vel metus lacinia, vitae luctus ipsum volutpat. Ut ac tellus in est elementum tempor. Maecenas tristique orci at velit facilisis, eget volutpat urna hendrerit. Etiam id felis eget dolor laoreet efficitur. Suspendisse potenti. Nam at consectetur justo, nec congue quam. Mauris tincidunt felis vitae mauris auctor, sit amet suscipit sapien tempor. Aliquam erat volutpat.</p>
+            <p>Phasellus eget risus id mi vulputate varius. Nunc in turpis ac nulla rhoncus scelerisque. Vivamus quis magna at enim tincidunt feugiat ac ac nulla. Integer consectetur nulla vitae dolor scelerisque, nec dictum orci accumsan. Sed tincidunt felis nec risus ultricies, in finibus velit tincidunt. Donec nec velit quis libero cursus laoreet. Proin quis felis vel velit aliquet scelerisque. Fusce vitae nulla sit amet turpis feugiat egestas. Sed at magna non nisi pharetra feugiat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Aliquam erat volutpat. Fusce feugiat, ante vitae placerat efficitur, nunc velit malesuada arcu, in malesuada ligula quam vel justo. Sed eleifend, felis at tristique ultrices, lorem orci tincidunt enim, vel consequat justo nulla eget libero. Nam interdum, lorem at auctor bibendum, ex magna sollicitudin tellus, eget fermentum purus lectus ac risus. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec dictum consectetur sapien, sit amet pulvinar velit semper vel.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec non mi vel velit euismod volutpat. Integer ullamcorper magna quis metus feugiat, a tristique erat interdum. Quisque non efficitur orci. Cras facilisis, quam vitae suscipit luctus, dolor libero feugiat sem, non malesuada nisi libero vel nisi. Sed sed neque eu arcu ultrices feugiat. Nunc vitae leo at sem tristique sollicitudin.</p>
+            <p>Curabitur venenatis eros vel metus lacinia, vitae luctus ipsum volutpat. Ut ac tellus in est elementum tempor. Maecenas tristique orci at velit facilisis, eget volutpat urna hendrerit. Etiam id felis eget dolor laoreet efficitur. Suspendisse potenti. Nam at consectetur justo, nec congue quam. Mauris tincidunt felis vitae mauris auctor, sit amet suscipit sapien tempor. Aliquam erat volutpat.</p>
+            <p>Phasellus eget risus id mi vulputate varius. Nunc in turpis ac nulla rhoncus scelerisque. Vivamus quis magna at enim tincidunt feugiat ac ac nulla. Integer consectetur nulla vitae dolor scelerisque, nec dictum orci accumsan. Sed tincidunt felis nec risus ultricies, in finibus velit tincidunt. Donec nec velit quis libero cursus laoreet. Proin quis felis vel velit aliquet scelerisque. Fusce vitae nulla sit amet turpis feugiat egestas. Sed at magna non nisi pharetra feugiat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Aliquam erat volutpat. Fusce feugiat, ante vitae placerat efficitur, nunc velit malesuada arcu, in malesuada ligula quam vel justo. Sed eleifend, felis at tristique ultrices, lorem orci tincidunt enim, vel consequat justo nulla eget libero. Nam interdum, lorem at auctor bibendum, ex magna sollicitudin tellus, eget fermentum purus lectus ac risus. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec dictum consectetur sapien, sit amet pulvinar velit semper vel.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec non mi vel velit euismod volutpat. Integer ullamcorper magna quis metus feugiat, a tristique erat interdum. Quisque non efficitur orci. Cras facilisis, quam vitae suscipit luctus, dolor libero feugiat sem, non malesuada nisi libero vel nisi. Sed sed neque eu arcu ultrices feugiat. Nunc vitae leo at sem tristique sollicitudin.</p>
+            <p>Curabitur venenatis eros vel metus lacinia, vitae luctus ipsum volutpat. Ut ac tellus in est elementum tempor. Maecenas tristique orci at velit facilisis, eget volutpat urna hendrerit. Etiam id felis eget dolor laoreet efficitur. Suspendisse potenti. Nam at consectetur justo, nec congue quam. Mauris tincidunt felis vitae mauris auctor, sit amet suscipit sapien tempor. Aliquam erat volutpat.</p>
+            <p>Phasellus eget risus id mi vulputate varius. Nunc in turpis ac nulla rhoncus scelerisque. Vivamus quis magna at enim tincidunt feugiat ac ac nulla. Integer consectetur nulla vitae dolor scelerisque, nec dictum orci accumsan. Sed tincidunt felis nec risus ultricies, in finibus velit tincidunt. Donec nec velit quis libero cursus laoreet. Proin quis felis vel velit aliquet scelerisque. Fusce vitae nulla sit amet turpis feugiat egestas. Sed at magna non nisi pharetra feugiat.</p>
+            
+            <p>Praesent eget ipsum eget nisi egestas lacinia. Sed id ex vitae justo tincidunt consectetur. Ut in velit at leo egestas malesuada. Suspendisse potenti. Duis vel justo ac arcu efficitur congue non ac nisi. Donec eu mauris at orci aliquet aliquet. Ut id turpis vel velit fermentum fermentum. Mauris pulvinar, velit at auctor hendrerit, magna elit dapibus mi, at feugiat felis metus sit amet elit.</p>
+            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus eu mauris et urna dignissim tincidunt. Aliquam erat volutpat. Nullam at mauris id odio pulvinar interdum. Nulla facilisi. Praesent quis sem quis urna scelerisque ullamcorper. Ut eu est quis mi tincidunt placerat.</p>
+            <p>Donec eget justo vitae sapien egestas scelerisque. In hac habitasse platea dictumst. Quisque eu est ut libero cursus eleifend vel at enim. Morbi interdum mauris et erat vestibulum, eu gravida leo tempor. Nunc nec tortor in nisl tincidunt varius. Phasellus lacinia, felis eu bibendum dapibus, odio nulla cursus libero, non consectetur nisi metus a nunc.</p>
+            <p>Suspendisse potenti. Ut a lorem in justo tincidunt posuere. Nunc euismod, odio sit amet aliquet tincidunt, ipsum eros lacinia nunc, a fermentum elit velit vel magna. Aliquam erat volutpat. Fusce volutpat, velit vel ultrices tristique, justo velit efficitur justo, nec semper lorem magna vel est.</p>
+            <p>Proin quis nibh ac justo ullamcorper malesuada. In hac habitasse platea dictumst. Integer nec ipsum at lorem dictum lacinia. Mauris nec tortor vel turpis cursus malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non urna vel nunc scelerisque tincidunt. Nam lacinia vel turpis a elementum.</p>
+        </div>
+
+        <div class="notification-card" id="notification-card">
+            <div class="card-header">
+                <button id="closebtn" class="close-btn">X</button>
+            </div>
+            <div class="card-content">
+                <h3>Novidade!</h3>
+                <p>Confira nossos novos produtos.</p>
+            </div>
+        </div>
+
+            <script>
+                 const closeButton = document.getElementById('closebtn');
+                 const notificationCard = document.getElementById('notification-card');
+
+                 closeButton.addEventListener('click', () => {
+                         notificationCard.classList.add('hidden');
+                    }
+                  );
+            </script>
+
+    </body>
+</html>
