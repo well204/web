@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Covid 19 Api</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Api sobre a covid 19</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome do Estado</th>
+                <th>Abreviação</th>
+                <th>Número de casos</th>
+                <th>Número de suspeitos</th>
+                <th>Número de falecimentos</th>
+            </tr>
+        </thead>
+
+        <tbody id="isGreater">
+        </tbody>
+    </table>
+    <h2>Média de Casos, Suspeitos e Falecimentos</h2>
+
+    <p id="media-casos"></p>
+    <p id="media-suspeitos"></p>
+    <p id="media-falecimentos"></p>
+
+    <script>
+        async function fetchCovidData() {
+            try {
+                const response = await fetch('https://covid19-brazil-api.vercel.app/api/report/v1');
+                if (!response.ok) {
+                    throw new Error('Erro');
+                }
+                const data = await response.json();
+                populateTable(data.data);
+            } catch (error) {
+                console.error('Erro', error);
+            }
+        }
+
+        function populateTable(data) {
+            const tbody = document.querySelector('tbody');
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.state}</td>
+                    <td>${item.uf}</td>
+                    <td>${item.cases}</td>
+                    <td>${item.suspects}</td>
+                    <td>${item.deaths}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        async function avarage(data) {
+            try {
+                const response = await fetch('https://covid19-brazil-api.vercel.app/api/report/v1');
+                if (!response.ok) {
+                    throw new Error('Erro');
+                }
+                const data = await response.json();
+                const totalCases = data.data.reduce((sum, item) => sum + item.cases, 0);
+                const totalSuspects = data.data.reduce((sum, item) => sum + item.suspects, 0);
+                const totalDeaths = data.data.reduce((sum, item) => sum + item.deaths, 0);
+                const averageCases = totalCases / data.data.length;
+                const averageSuspects = totalSuspects / data.data.length;
+                const averageDeaths = totalDeaths / data.data.length;   
+
+                document.getElementById('media-casos').textContent = `Média de Casos: ${averageCases.toFixed(2)}`;
+                document.getElementById('media-suspeitos').textContent = `Média de Suspeitos: ${averageSuspects.toFixed(2)}`;
+                document.getElementById('media-falecimentos').textContent = `Média de Falecimentos: ${averageDeaths.toFixed(2)}`;  
+            } catch (error) {
+                console.error('Erro ao calcular médias', error);
+        }
+    }
+    
+        async function isGreaterThanAverage() {
+            try {
+                const response = await fetch('https://covid19-brazil-api.vercel.app/api/report/v1');
+                const data = await response.json();
+                const averageDeaths = data.data.reduce((sum, item) => sum + item.deaths, 0) / data.data.length;
+
+                const tbody = document.getElementById('isGreater');
+                Array.from(tbody.rows).forEach((row, idx) => {
+                    const deaths = parseInt(row.cells[4].textContent, 10);
+                    if (deaths > averageDeaths) {
+                        row.style.backgroundColor = 'red';
+                    } else {
+                        row.style.backgroundColor = '';
+                    }
+                });
+            } catch (error) {
+                console.error('Erro ao verificar estados', error);
+            }
+        }
+    
+        // Chama as funções para buscar os dados e calcular as médias
+
+        // 4 - Ainda, usando a Tabela do Exercício 1, indique qual estado teve a maior relação Casos/Falecimentos.
+    async function showHighestCaseDeathRatio() {
+        try {
+            const response = await fetch('https://covid19-brazil-api.vercel.app/api/report/v1');
+            if (!response.ok) throw new Error('Erro');
+            const data = await response.json();
+            let maxRatio = -Infinity;
+            let stateName = '';
+            data.data.forEach(item => {
+                if (item.deaths > 0) {
+                    const ratio = item.cases / item.deaths;
+                    if (ratio > maxRatio) {
+                        maxRatio = ratio;
+                        stateName = item.state;
+                    }
+                }
+            });
+            const info = document.createElement('p');
+            info.textContent = `Estado com maior relação Casos/Falecimentos: ${stateName} (${maxRatio.toFixed(2)})`;
+            document.body.appendChild(info);
+        } catch (error) {
+            console.error('Erro ao calcular relação Casos/Falecimentos', error);
+        }
+    }
+
+    async function showLowestCaseDeathRatio() {
+        try {
+            const response = await fetch('https://covid19-brazil-api.vercel.app/api/report/v1');
+            if (!response.ok) throw new Error('Erro');
+            const data = await response.json();
+            let minRatio = Infinity;
+            let stateName = '';
+            data.data.forEach(item => {
+                if (item.deaths > 0) {
+                    const ratio = item.cases / item.deaths;
+                    if (ratio < minRatio) {
+                        minRatio = ratio;
+                        stateName = item.state;
+                    }
+                }
+            });
+            const info = document.createElement('p');
+            info.textContent = `Estado com menor relação Casos/Falecimentos: ${stateName} (${minRatio.toFixed(2)})`;
+            document.body.appendChild(info);
+        } catch (error) {
+            console.error('Erro ao calcular menor relação Casos/Falecimentos', error);
+        }
+    }
+
+         showHighestCaseDeathRatio();
+         showLowestCaseDeathRatio();
+
+
+        fetchCovidData();
+        avarage();
+        isGreaterThanAverage();
+    </script>
+
+</body>
+
+</html>
